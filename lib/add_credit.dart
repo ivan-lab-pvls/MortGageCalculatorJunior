@@ -2,6 +2,7 @@ import 'package:app/parameters.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+import 'edit_credit.dart';
 import 'main.dart';
 
 class AddCredit extends StatefulWidget {
@@ -301,17 +302,7 @@ class _AddCreditState extends State<AddCredit> {
                               ),
                             ),
                             Text(
-                              switch (i) {
-                                "Total payments" =>
-                                  credit.totalPayment.toStringAsFixed(2),
-                                "Monthly payments" =>
-                                  credit.monthlyPayment.toStringAsFixed(2),
-                                "Full cost of credit" =>
-                                  credit.fullCost.toStringAsFixed(2),
-                                "Overpayment" =>
-                                  credit.overpayment.toStringAsFixed(2),
-                                _ => "",
-                              },
+                              getCreditInfo(i, credit),
                               style: const TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w900,

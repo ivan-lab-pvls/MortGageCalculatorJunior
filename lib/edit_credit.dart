@@ -9,6 +9,21 @@ class EditCredit extends StatefulWidget {
   State<EditCredit> createState() => _EditCreditState();
 }
 
+String getCreditInfo(String key, Credit credit) {
+  switch (key) {
+    case "Total payments":
+      return credit.totalPayment.toStringAsFixed(2);
+    case "Monthly payments":
+      return credit.monthlyPayment.toStringAsFixed(2);
+    case "Full cost of credit":
+      return credit.fullCost.toStringAsFixed(2);
+    case "Overpayment":
+      return credit.overpayment.toStringAsFixed(2);
+    default:
+      return "";
+  }
+}
+
 class _EditCreditState extends State<EditCredit> {
   int selectedType = 1;
 
@@ -296,17 +311,7 @@ class _EditCreditState extends State<EditCredit> {
                             ),
                           ),
                           Text(
-                            switch (i) {
-                              "Total payments" =>
-                                credit.totalPayment.toStringAsFixed(2),
-                              "Monthly payments" =>
-                                credit.monthlyPayment.toStringAsFixed(2),
-                              "Full cost of credit" =>
-                                credit.fullCost.toStringAsFixed(2),
-                              "Overpayment" =>
-                                credit.overpayment.toStringAsFixed(2),
-                              _ => "",
-                            },
+                            getCreditInfo(i, credit),
                             style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.w900,
