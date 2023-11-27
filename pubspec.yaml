@@ -1,0 +1,62 @@
+name: app
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+    sdk: ">=3.3.0-91.0.dev <4.0.0"
+
+dependencies:
+    firebase_core: ^2.23.0
+    firebase_messaging: ^14.7.5
+    firebase_remote_config: ^4.3.5
+    flutter:
+        sdk: flutter
+    flutter_local_notifications: ^16.1.0
+    image_pixels: ^3.0.1
+    http:
+    flutter_inappwebview:
+    in_app_review: ^2.0.8
+    intl: ^0.18.1
+    overlay_support: ^2.1.0
+    shared_preferences: ^2.2.2
+    url_launcher: ^6.2.1
+
+dev_dependencies:
+    flutter_test:
+        sdk: flutter
+    flutter_lints: ^2.0.0
+
+flutter:
+    uses-material-design: true
+    assets:
+        - assets/
+        - assets/img/
+        - assets/fonts/
+
+    fonts:
+        - family: Satoshi
+          fonts:
+              - asset: assets/fonts/Satoshi-Regular.otf
+              - asset: assets/fonts/Satoshi-Italic.otf
+                style: italic
+              - asset: assets/fonts/Satoshi-Medium.otf
+                weight: 500
+              - asset: assets/fonts/Satoshi-MediumItalic.otf
+                weight: 500
+                style: italic
+              - asset: assets/fonts/Satoshi-Bold.otf
+                weight: 700
+              - asset: assets/fonts/Satoshi-BoldItalic.otf
+                weight: 700
+                style: italic
+              - asset: assets/fonts/Satoshi-Light.otf
+                weight: 300
+              - asset: assets/fonts/Satoshi-LightItalic.otf
+                weight: 300
+                style: italic
+              - asset: assets/fonts/Satoshi-Black.otf
+                weight: 900
+              - asset: assets/fonts/Satoshi-BlackItalic.otf
+                weight: 900
+                style: italic
